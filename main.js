@@ -18,25 +18,33 @@ function submitHandler() {
 
 // Ex-05
 function calculateProfitAndLoss(initial, quantity, current) {
-  if (initial > current) {
-    var loss = (initial - current) * quantity;
-    var lossPercentage = (loss / initial) * 100;
 
-    showOutput(
-      `Hey, the loss is ${loss} and the percent is ${lossPercentage}%`
-    );
-  } else if (current > initial) {
-    var profit = (current - initial) * quantity;
-    var profitPercentage = (profit / initial) * 100;
+  if (initial > 0 && quantity > 0 && current > 0) {
+    if (initial > current) {
+      var loss = (initial - current) * quantity;
+      var lossPercentage = (loss / initial) * 100;
 
-    showOutput(
-      `Hey, the profit is ${profit} and the percent is ${profitPercentage}%`
-    );
-  } else {
-    showOutput(`No pain no gain and no gain no pain`);
+      showOutput(
+        `Hey, the loss is ${loss} and the percent is ${lossPercentage}%`
+      );
+    } else if (current > initial) {
+      var profit = (current - initial) * quantity;
+      var profitPercentage = (profit / initial) * 100;
+
+      showOutput(
+        `Hey, the profit is ${profit} and the percent is ${profitPercentage}%`
+      );
+    } else {
+      showOutput(`No pain no gain and no gain no pain`);
+    }
+  }
+  else
+  {
+    showOutput(`Enter Valid input`);
   }
 }
 
 function showOutput(message) {
   outputBox.innerHTML = message;
+  outputBox.style.color="red";
 }

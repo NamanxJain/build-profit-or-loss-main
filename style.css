@@ -7,7 +7,7 @@
 }
 
 :root {
-  --primary-color: #ed3a3a;
+  --primary-color: #ffffff;
 }
 
 body {
@@ -51,12 +51,12 @@ header h1 {
 .btn-check {
   background: var(--primary-color);
   border: none;
-  color: #fff;
+  color: rgb(185, 32, 32);
   padding: 0.7rem 1rem;
   border-radius: 0.5rem;
   font-size: large;
   cursor: pointer;
-  outline: #fff;
+  outline: rgb(0, 0, 0);
   margin: auto;
   display: block;
 }
@@ -95,4 +95,16 @@ li {
 img {
   width: 40px;
   padding: 1rem 0.2rem;
+}
+
+.container
+{
+  background-color: rgba(201, 197, 192, 0.375);
+  max-width: 700px;
+  margin:auto;
+  height: 500px;
+  padding: 10px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
 }
